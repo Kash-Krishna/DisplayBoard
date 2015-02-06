@@ -9,7 +9,8 @@ awes0metyt
 
 
 weather site:
-api.openweathermap.org/data/2.5/weather?q=Riverside,CA<US
+http://api.wunderground.com/api/cfe5ac04d6235cfd/conditions/q/pws:KCARIVER41.json 500 clicks per day
+//api.openweathermap.org/data/2.5/weather?q=Riverside,CA<US
 
 
 
