@@ -1,3 +1,13 @@
+login info
+name
+DisplayBoard001@gmail.com
+awes0metyt
+
+
+
+
+
+
 weather site:
 api.openweathermap.org/data/2.5/weather?q=Riverside,CA<US
 
