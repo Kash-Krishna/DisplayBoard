@@ -1,0 +1,62 @@
+weather site:
+api.openweathermap.org/data/2.5/weather?q=Riverside,CA<US
+
+
+
+
+
+
+
+
+using js and reveal.js
+
+Slides Format
+
+                                                          fliers
+                                                           ^                             
+                                                           |
+                                                           V
+BCOE news <--> announcements <--> fliers <--> calender with events <--> weather <--> Games
+                                                           ^
+                                                           |
+                                                           V
+                                                          fliers
+
+
+BCOE news
+just copy their message board. not expecting it to update frequently
+
+
+
+Announcements
+try to scroll announcements and "click"on them to get more info on the same page
+
+HeaderList  |  Details
+     |            |
+     V           ->
+                  |
+                  |
+
+
+
+Fliers
+Jun sends alot of fliers out in emails for events
+should have roughly 1 flyer on this slide with the ability to go up and down to switch slides
+
+
+calender (Optional?)
+
+
+Weather slide
+displays weather information
+(Optional) - have the weather update in real-time
+(Optional) - have scrolling option up/down for different weather info
+
+
+
+Games
+Find and add games that can be play with the Kinect
+1-2 player games if possible
+need the source code for these games 
+
+
