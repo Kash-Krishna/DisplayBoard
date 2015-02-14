@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<script src="./jquery-1.11.2.min.js"></script>
+<!-- <script src="/code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+
+<html>
+<body>
+<script>
+	var Weather = {
+		title:"Weather Underground",
+		city:"default",
+		state:"default",
+		zip:"default",
+		tempSum:"default",
+		windSum:"default",
+	};
+
+    Weather.getCurrentWeather = function(){
+    	//make a wunderground api request
+    	//parse the json string into each field of weather obj
+    	
+    	$.ajax({
+    		url: "http://api.wunderground.com/api/cfe5ac04d6235cfd/conditions/q/pws:KCARIVER41.json",
+    		success: funciton(JSONString){
+    			// document.getElementById('demo').innerHTML = JSONString;
+                console.log()
+	   			//this.titile = JSONString.parse("title");
+				// this.city = JSONString.parse("");
+    		}
+    	});
+    	// JSONString = 'http://api.wunderground.com/api/cfe5ac04d6235cfd/conditions/q/pws:KCARIVER41.json';
+    }
+
+    var w = new Weather;
+    w.getCurrentWeather();
+</script>
+
+<p id="demo"></p>
+
+</body>
+</html>
