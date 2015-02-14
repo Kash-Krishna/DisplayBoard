@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 
-<script src="./jquery-1.11.2.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <!-- <script src="/code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
 
 <html>
+<head>
+<meta charset="UTF-8">
+<title>this is the title</title>
+</head>
 <body>
 <script>
 	var Weather = {
@@ -18,20 +22,22 @@
     Weather.getCurrentWeather = function(){
     	//make a wunderground api request
     	//parse the json string into each field of weather obj
-    	
     	$.ajax({
-    		url: "http://api.wunderground.com/api/cfe5ac04d6235cfd/conditions/q/pws:KCARIVER41.json",
-    		success: funciton(JSONString){
-    			// document.getElementById('demo').innerHTML = JSONString;
-                console.log()
-	   			//this.titile = JSONString.parse("title");
-				// this.city = JSONString.parse("");
-    		}
-    	});
+			url: "http://api.wunderground.com/api/cfe5ac04d6235cfd/conditions/q/pws:KCARIVER41.json",
+			success: function(JSONString) {
+			// document.getElementById('demo').innerHTML = JSONString;
+				console.log(JSON.stringify(JSONString));
+				//this.title = JSONString.parse("title");
+				//console.log(title);
+				//this.city = JSONString.parse("");
+				//console.log(city);
+			}
+		});
+
     	// JSONString = 'http://api.wunderground.com/api/cfe5ac04d6235cfd/conditions/q/pws:KCARIVER41.json';
     }
 
-    var w = new Weather;
+    var w = Weather;
     w.getCurrentWeather();
 </script>
 
