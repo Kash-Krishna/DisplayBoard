@@ -70,9 +70,12 @@
 				<section>
 					<h2>Weather</h2>
 					<script>
-						if (/*timer check updates*/){
-							var w = Weather;
+						var curTime = new Date().getMinutes();
+						var w = Weather;
+						w.getCurrentWeather();
+						if (curTime % 5 === 0){
 							w.getCurrentWeather();
+							// alert("it changed!!!");
 						}
 					</script>
 					<p id="weatherSlideInfo"></p>
