@@ -1,4 +1,8 @@
 <!doctype html>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="./js/weather.js"> </script>
+
 <html lang="en">
 
 	<head>
@@ -65,6 +69,13 @@
 
 				<section>
 					<h2>Weather</h2>
+					<script>
+						if (/*timer check updates*/){
+							var w = Weather;
+							w.getCurrentWeather();
+						}
+					</script>
+					<p id="weatherSlideInfo"></p>
 				</section>
 
 				<section>
