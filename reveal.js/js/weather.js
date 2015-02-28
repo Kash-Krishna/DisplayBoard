@@ -44,12 +44,16 @@ Weather.getCurrentWeather = function(){
 			weatherString += status + "<br>";
 			weatherString += "Current Temperature: " + tempString + "<br>";
 			weatherString += "Currently feels like: " + feels + "<br> <br>";
+
+			weatherString += "<p1 id=\"lesser\" >";
 			weatherString += "Wind: " + windString + "<br>";
 			weatherString += "Humidity: " + humidity + "<br>";
 			weatherString += "Pressure: " +pressure + "in" + "<br>";
 			weatherString += "Dew Point: " + dewPoint + "<br>";
+			weatherString += "</p1>";
 			//weatherString += lastUpdate + "<br>";
 			document.getElementById('weatherSlideInfo').innerHTML = weatherString;
+			document.getElementById('lesser').style.fontSize = "27px";
 		}
 	});
 
