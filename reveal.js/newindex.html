@@ -70,15 +70,14 @@
 				<section>
 					<h2>Weather</h2>
 					<script>
-						var curTime = new Date().getMinutes();
 						var w = Weather;
 						w.getCurrentWeather();
-						if (curTime % 5 === 0){
-							w.getCurrentWeather();
-							// alert("it changed!!!");
-						}
+						setInterval(function(){ 
+								w.getCurrentWeather();
+								// alert("it changed!!!");
+							}, 300000);
 					</script>
-					<p id="weatherSlideInfo"></p>
+					<font color="gold"><p id="weatherSlideInfo" align="left"></p></font>
 				</section>
 
 				<section>

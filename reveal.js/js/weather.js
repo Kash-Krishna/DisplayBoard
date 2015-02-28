@@ -14,6 +14,8 @@ var Weather = {
 	pressure:"default",
 	dewPoint:"default",
 	lastUpdate:"default",
+	icon:"default",
+	status:"default",
 	
 };
 
@@ -21,7 +23,7 @@ Weather.getCurrentWeather = function(){
 	//make a wunderground api request
 	//parse the json string into each field of weather obj
 	$.ajax({
-		url: "http://api.wunderground.com/api/cfe5ac04d6235cfd/conditions/q/pws:KCARIVER41.json",
+		url: "http://api.wunderground.com/api/cfe5ac04d6235cfd/conditions/q/pws:KCARIVER35.json",
 		success: function(JSONString) {
 			title = JSONString.current_observation.image.title;
 			city = JSONString.current_observation.display_location.full;
@@ -32,19 +34,21 @@ Weather.getCurrentWeather = function(){
 			feels = JSONString.current_observation.feelslike_string;
 			pressure = JSONString.current_observation.pressure_in;
 			dewPoint = JSONString.current_observation.dewpoint_string;
-			lastUpdate = JSONString.current_observation.observation_time + JSONString.current_observation.local_time_rfc822;
+			lastUpdate = JSONString.current_observation.observation_time;
+			icon = JSONString.current_observation.icon;
+			status = JSONString.current_observation.weather;
 			
 			var weatherString = "";
-			weatherString += title + "<br>";
-			weatherString += city + "<br>";
-			weatherString += zip + "<br>";
-			weatherString += tempString + "<br>";
-			weatherString += windString + "<br>";
-			weatherString += humidity + "<br>";
-			weatherString += feels + "<br>";
-			weatherString += pressure + "<br>";
-			weatherString += dewPoint + "<br>";
-			weatherString += lastUpdate + "<br>";
+			//weatherString += city + " ";
+			//weatherString += zip + "<br>";
+			weatherString += status + "<br>";
+			weatherString += "Current Temperature: " + tempString + "<br>";
+			weatherString += "Currently feels like: " + feels + "<br> <br>";
+			weatherString += "Wind: " + windString + "<br>";
+			weatherString += "Humidity: " + humidity + "<br>";
+			weatherString += "Pressure: " +pressure + "in" + "<br>";
+			weatherString += "Dew Point: " + dewPoint + "<br>";
+			//weatherString += lastUpdate + "<br>";
 			document.getElementById('weatherSlideInfo').innerHTML = weatherString;
 		}
 	});
