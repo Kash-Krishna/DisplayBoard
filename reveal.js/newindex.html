@@ -1,10 +1,14 @@
-﻿<!doctype html>
+<!doctype html>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="./js/weather.js"> </script>
+
 <html lang="en">
 
 	<head>
 		<meta charset="utf-8">
 
-		<title>BCOE Display Board</title>
+		<title>reveal.js - The HTML Presentation Framework</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -16,12 +20,6 @@
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css" id="theme">
-		
-		
-		<script src='http://cdn.zigfu.com/zigjs/zig.min.js'></script>
-		<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="src/HandPointerController.js"></script>
-		<link rel="stylesheet" type="text/css" href="src/cursor.css" />
 		
 		<META http-equiv="refresh" content="600" >
 
@@ -44,10 +42,8 @@
 
 	<body>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
 		<div class="reveal">
-			
+
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<!-- -->
@@ -62,21 +58,27 @@
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
-                        <iframe src="https://www.google.com/calendar/embed?src=1q4rvj0n8l8tur8pmci77unn78%40group.calendar.google.com&ctz=America/Los_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>					
-                    </section>
+<iframe src="https://www.google.com/calendar/embed?src=1q4rvj0n8l8tur8pmci77unn78%40group.calendar.google.com&ctz=America/Los_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>					</section>
 					<section>
 						<h2>Flier 1</h2>
 					</section>
 					<section>
 						<h2>Flier 2</h2>
 					</section>
-                    <section>
-                        <h2>Flier 3</h2>
-                    </section>
 				</section>
 
 				<section>
 					<h2>Weather</h2>
+					<script>
+						var w = Weather;
+						w.getCurrentWeather();
+						setInterval(function(){ 
+								w.getCurrentWeather();
+								// alert("it changed!!!");
+							}, 300000);
+					</script>
+					<font color="gold"><p id="weatherSlideInfo" align="left"></p></font>
+
 				</section>
 
 				<section>
@@ -88,6 +90,8 @@
 
 		</div>
 
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
 
 		<script>
 
@@ -114,6 +118,5 @@
 
 		</script>
 
-		<script src="src/kinectMain.js"></script>
 	</body>
 </html>
