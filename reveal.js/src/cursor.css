@@ -1,0 +1,31 @@
+#mycursor {
+	position: fixed;
+	display : none;
+	width : 64px;
+	height : 64px;
+	background-color : transparent;
+	background-image : url("circle.png");
+	opacity = .4;
+	filter: alpha(opacity=40);
+	pointer-events: none;
+}
+ 
+#mycursor.pushed {
+	background-color: transparent;
+}
+
+ div#radar 
+    {
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+        position: relative;
+        overflow: hidden;
+    }
+    div.user 
+    {
+        position: relative;
+        width: 10px;
+        height: 10px;
+        background-color: blue;
+    }
