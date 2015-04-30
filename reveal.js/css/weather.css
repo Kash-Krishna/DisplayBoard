@@ -1,0 +1,11 @@
+/*******************************************
+ * WEATHER STUFF
+ *******************************************/
+html.img-right div.slide-background.present {
+    background-position: center;
+	position : fixed;
+	top: 230px;
+	left: 800px; 
+	max-height: 180px;
+	max-width: 200px;
+}

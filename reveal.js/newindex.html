@@ -8,7 +8,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>BCOE Display Board</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -20,6 +20,15 @@
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/weather.css">
+		
+		<script src='http://cdn.zigfu.com/zigjs/zig.min.js'></script>
+		zig.embed();
+		<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="src/kinectMain.js"></script>
+		<link rel="stylesheet" type="text/css" href="src/cursor.css" />
+		
+		<link rel="stylesheet" href="css/button.css">
 		
 		<META http-equiv="refresh" content="600" >
 
@@ -49,6 +58,24 @@
 				<!-- -->
 				<section>
 					<h1>BCOE News</h1>
+					<button type=" button" id = "btn">
+					<a href="http://www.engr.ucr.edu/news/2015/2015-04-17.html"> Super Day for Super Science at Bourns College of Engineering <span> </span></a>
+						</button>
+					<button type=" button" id = "btn">
+					<a href="http://www.engr.ucr.edu/news/2015/2015-04-08a.html"> Bourns College of Engineering partners with Pearson to launch online M.S. in engineering <span> </span></a>
+						</button>
+					<button type=" button" id = "btn">
+					<a href="http://www.engr.ucr.edu/news/2015/2015-04-08.html"> Region’s community college students participate in Wind Turbine competition <span> </span></a>
+						</button>
+					<button type=" button" id = "btn">
+					<a href="http://www.engr.ucr.edu/news/2015/2015-03-09.html"> Jassby talks about desalination process on National Public Radio's (NPR) Here & Now program<span> </span></a>
+						</button>
+					<button type=" button" id = "btn">
+					<a href="http://www.engr.ucr.edu/news/2015/2015-02-25.html">MESA Day 2015<span> </span></a>
+						</button>
+					<button type=" button" id = "btn">
+					<a href="http://www.engr.ucr.edu/news/2015/2015-02-23.html"> Ozkan team develops methods to synthesize 2D materials<span> </span></a>
+						</button>
 				</section>
 
 				<section>
@@ -69,6 +96,8 @@
 
 				<section>
 					<h2>Weather</h2>
+					<section data-background="./gifs/sunny.gif" data-state="img-right">
+					</section>
 					<script>
 						var w = Weather;
 						w.getCurrentWeather();
@@ -118,5 +147,7 @@
 
 		</script>
 
+		<script src="src/kinectMain.js"></script>
+		
 	</body>
 </html>

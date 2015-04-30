@@ -189,18 +189,25 @@ zig.singleUserSession.addListener(c);
 var swipeDetector = zig.controls.SwipeDetector();
 swipeDetector.addEventListener('swipeup', function(pd) {
 	console.log('SwipeDetector: Swipe Up');
-	//Reveal.next();
-    //simulateKeyPress("j");
+	if (recentlySwipedCounter == -1)
+	{
+		Reveal.down();
+	}
+	recentlySwipedCounter = 0;
 });
 swipeDetector.addEventListener('swipedown', function(pd) {
 	console.log('SwipeDetector: Swipe Down');
-    //simulateKeyPress("k");
+	if (recentlySwipedCounter == -1)
+	{
+		Reveal.up();
+	}
+	recentlySwipedCounter = 0;
 });
 swipeDetector.addEventListener('swipeleft', function(pd) {
 	console.log('SwipeDetector: Swipe Left');
 	if (recentlySwipedCounter == -1)
 	{
-		Reveal.next();
+		Reveal.right();
 	}
 	recentlySwipedCounter = 0;
 });
@@ -208,7 +215,7 @@ swipeDetector.addEventListener('swiperight', function(pd) {
 	console.log('SwipeDetector: Swipe Right');
 	if (recentlySwipedCounter == -1)
 	{
-		Reveal.prev();
+		Reveal.left();
 	}
 	recentlySwipedCounter = 0;
 });
