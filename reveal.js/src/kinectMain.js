@@ -120,9 +120,7 @@ engager.addEventListener('userengaged', function(user) {
 var c = zig.controls.Cursor();
 var ce = document.createElement('div');
 ce.id = 'mycursor';
-
 document.body.appendChild(ce);
- 
 // 1. show/hide cursor on session start/end
 zig.singleUserSession.addEventListener('sessionstart', function(focusPosition) {
 	ce.style.display = 'block';
